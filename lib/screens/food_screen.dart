@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 class FoodScreen extends StatelessWidget {
   FoodScreen({super.key});
   List<String> images = [
-    'https://telegra.ph/file/c43dec8e5bf84e293226b.png',
-    'https://telegra.ph/file/66dcb495c486c126d05a3.png',
-    'https://telegra.ph/file/c2fb715c261af39bee48b.png',
-    'https://telegra.ph/file/81a5602a9dcef483be0e0.png',
-    'https://telegra.ph/file/96b89f41c260678265f5b.png',
-    'https://telegra.ph/file/df13cd5fa4c0c10decc7a.png',
+    'assets/images/1.png',
+    'assets/images/2.png',
+    'assets/images/3.png',
+    'assets/images/4.png',
+    'assets/images/5.png',
+    'assets/images/6.png',
   ];
   List<String> labels = [
     'Top 10 restauarants',
@@ -92,7 +92,7 @@ class FoodScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10 * fem),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(images[index]),
+                    image: AssetImage(images[index]),
                   ),
                 ),
                 child: Column(

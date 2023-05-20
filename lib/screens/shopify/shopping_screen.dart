@@ -5,17 +5,17 @@ import 'package:flutter/material.dart';
 class ShoppingScreen extends StatelessWidget {
   ShoppingScreen({super.key});
   List<String> images = [
-    'https://telegra.ph/file/73b975b3b9266d8c2470c.png',
-    'https://telegra.ph/file/8e690b24e0e1a6313ce29.png',
-    'https://telegra.ph/file/9ebc39047092c2c835e53.png',
-    'https://telegra.ph/file/38a7f5dd71b4070dfee09.png',
-    'https://telegra.ph/file/dce79fc3876d1b3dd839e.png',
-    'https://telegra.ph/file/352b0f1c39d2233996455.png',
-    'https://telegra.ph/file/bd5e854d0c792d81b15cf.png',
-    'https://telegra.ph/file/5bf35cd75abb9925f5512.png',
-    'https://telegra.ph/file/e1ecb63e6aa15e003e386.png',
-    'https://telegra.ph/file/6d79feaa5450fa9cba9f5.png',
-    'https://telegra.ph/file/8536fa827b95681e5bc88.png',
+    'assets/images/11.jpg',
+    'assets/images/12.jpg',
+    'assets/images/13.jpg',
+    'assets/images/14.jpg',
+    'assets/images/15.jpg',
+    'assets/images/16.jpg',
+    'assets/images/17.jpg',
+    'assets/images/18.jpg',
+    'assets/images/19.jpg',
+    'assets/images/20.jpg',
+    'assets/images/21.jpg',
   ];
   List<String> labels = [
     'Adras tòn\n150 ming',
@@ -68,7 +68,7 @@ class ShoppingScreen extends StatelessWidget {
             );
           },
           child: GridTile(
-            child: Image.network(
+            child: Image.asset(
               images[index],
               fit: BoxFit.cover,
             ),
