@@ -1,22 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:travel_point/screens/checklist/checklist_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
+  HomeScreen({super.key});
+  final GlobalKey<ScaffoldState> _key = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _key,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.checklist_rounded, // Replace with your custom icon
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ChecklistScreen(),
+              ),
+            );
+          },
+        ),
         backgroundColor: Colors.blue[50],
         centerTitle: true,
         title: SizedBox(
           height: 45,
           child: TextField(
             decoration: InputDecoration(
-              prefixIcon: IconButton(icon: const Icon(Icons.menu), onPressed: () {}),
+              // prefixIcon: IconButton(
+              //     icon: const Icon(Icons.menu),
+              //     onPressed: () {
+              //       _key.currentState!.openDrawer();
+              //     }),
               suffixIcon: IconButton(icon: const Icon(Icons.search), onPressed: () {}),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),

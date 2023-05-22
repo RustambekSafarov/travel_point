@@ -28,6 +28,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFFE0EDFE),
       body: Form(
         key: _formKey,
