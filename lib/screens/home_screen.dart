@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:travel_point/screens/checklist/checklist_screen.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -37,7 +36,8 @@ class HomeScreen extends StatelessWidget {
               //     onPressed: () {
               //       _key.currentState!.openDrawer();
               //     }),
-              suffixIcon: IconButton(icon: const Icon(Icons.search), onPressed: () {}),
+              suffixIcon:
+                  IconButton(icon: const Icon(Icons.search), onPressed: () {}),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
@@ -54,19 +54,19 @@ class HomeScreen extends StatelessWidget {
       ),
       body: FlutterMap(
         options: MapOptions(
-          center: LatLng(39.6548, 66.9597),
-          zoom: 13,
+          initialCenter: LatLng(39.6548, 66.9597),
+          initialZoom: 13,
         ),
-        nonRotatedChildren: [
-          RichAttributionWidget(
-            attributions: [
-              TextSourceAttribution(
-                'OpenStreetMap contributors',
-                onTap: () => launchUrl(Uri.parse('https://openstreetmap.org/copyright')),
-              ),
-            ],
-          ),
-        ],
+        // mapController: [
+        //   RichAttributionWidget(
+        //     attributions: [
+        //       TextSourceAttribution(
+        //         'OpenStreetMap contributors',
+        //         onTap: () => launchUrl(Uri.parse('https://openstreetmap.org/copyright')),
+        //       ),
+        //     ],
+        //   ),
+        // ],
         children: [
           TileLayer(
             urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
